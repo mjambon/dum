@@ -1,0 +1,5 @@
+version = "@VERSION@"
+description = "Dump OCaml values"
+requires = "easy-format"
+archive(byte) = "dum.cma"
+archive(native) = "dum.cmxa"
