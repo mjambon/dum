@@ -19,20 +19,21 @@ Some forced lazy values will always be printed no matter what.
 Installation
 ------------
 
-After having installed the easy-format library, do:
-
-make
-make opt
-make install
-
-Or install everything from GODI.
-
+```
+$ opam update
+$ opam install dum
+```
 
 Usage
 -----
 
-See HTML documentation.
+```
+# #require "dum;;
+# Dum.to_stdout (123, "abc", Not_found, [`A; `B 'x']);;
+(123 "abc" object-7 () [ 65 (66 120) ])
+```
 
+See `dum.mli` for more information.
 
 License
 -------
