@@ -27,6 +27,9 @@ $ opam install dum
 Usage
 -----
 
+We do not recommend the use of this library in production code due to
+its reliance on OCaml internals and unsafe memory access.
+
 ```
 $ utop -require dum
 # Dum.to_stdout (123, "abc", Not_found, [`A; `B 'x']);;
