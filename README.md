@@ -28,7 +28,7 @@ Usage
 -----
 
 ```
-# #require "dum;;
+$ utop -require dum
 # Dum.to_stdout (123, "abc", Not_found, [`A; `B 'x']);;
 (123 "abc" object-7 () [ 65 (66 120) ])
 ```
