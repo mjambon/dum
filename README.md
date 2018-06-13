@@ -30,10 +30,20 @@ Usage
 We do not recommend the use of this library in production code due to
 its reliance on OCaml internals and unsafe memory access.
 
-```
+```ocaml
 $ utop -require dum
 # Dum.to_stdout (123, "abc", Not_found, [`A; `B 'x']);;
 (123 "abc" object-7 () [ 65 (66 120) ])
+```
+
+A circular list is printed as follows:
+
+```ocaml
+# let rec cyc = 1 :: 2 :: 3 :: cyc;;
+val cyc : int list = [1; 2; 3; <cycle>]
+
+utop # Dum.to_stdout cyc;;
+#0: (1 (2 (3 #0)))
 ```
 
 See `dum.mli` for more information.
