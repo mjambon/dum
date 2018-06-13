@@ -46,6 +46,63 @@ utop # Dum.to_stdout cyc;;
 #0: (1 (2 (3 #0)))
 ```
 
+First-class modules can be inspected as well. Here's what I get for the `Sys` module:
+
+```ocaml
+# module type Sys = module type of Sys;;
+# Dum.to_stdout (module Sys : Sys);;
+(
+  ("/home/martin/.opam/4.05.0/bin/utop" "-require" "dum")
+  "/home/martin/.opam/4.05.0/bin/utop"
+  closure ()
+  (1)
+  "Unix"
+  1
+  1
+  0
+  0
+  64
+  63
+  0
+  144115188075855863
+  18014398509481983
+  #0: closure ()
+  -1
+  -2
+  -3
+  -4
+  -5
+  -6
+  -7
+  -8
+  -9
+  -10
+  -11
+  -12
+  -13
+  -14
+  -15
+  -16
+  -17
+  -18
+  -19
+  -20
+  -21
+  -22
+  -23
+  -24
+  -25
+  -26
+  -27
+  -28
+  #1: object1 ()
+  closure (#0 -6 #1)
+  "4.05.0"
+  closure ()
+  closure ()
+)
+```
+
 See `dum.mli` for more information.
 
 License
