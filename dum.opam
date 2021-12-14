@@ -13,12 +13,11 @@ license: "LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception"
 homepage: "https://github.com/dune-universe/dum"
 bug-reports: "https://github.com/dune-universe/dum/issues"
 depends: [
-  "dune" {>= "2.9"}
+  "dune" {>= "2.0"}
   "easy-format"
-  "odoc" {with-doc}
 ]
 build: [
-  ["dune" "subst"] {dev}
+  ["dune" "subst"] {pinned}
   [
     "dune"
     "build"
@@ -26,11 +25,9 @@ build: [
     name
     "-j"
     jobs
-    "--promote-install-files=false"
     "@install"
     "@runtest" {with-test}
     "@doc" {with-doc}
   ]
-  ["dune" "install" "-p" name "--create-install-files" name]
 ]
 dev-repo: "git+https://github.com/dune-universe/dum.git"
