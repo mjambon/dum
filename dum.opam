@@ -10,8 +10,8 @@ objects or exceptions in depth and without risk."""
 maintainer: ["martin@mjambon.com"]
 authors: ["Martin Jambon" "Jean-Christophe Filliatre" "Richard W.M. Jones"]
 license: "LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception"
-homepage: "https://github.com/dune-universe/dum"
-bug-reports: "https://github.com/dune-universe/dum/issues"
+homepage: "https://github.com/mjambon/dum"
+bug-reports: "https://github.com/mjambon/dum/issues"
 depends: [
   "dune" {>= "2.0"}
   "easy-format"
@@ -30,4 +30,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/dune-universe/dum.git"
+dev-repo: "git+https://github.com/mjambon/dum.git"

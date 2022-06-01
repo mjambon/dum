@@ -3,12 +3,12 @@
 (generate_opam_files true)
 
 (maintainers "martin@mjambon.com")
-(authors 
+(authors
   "Martin Jambon"
   "Jean-Christophe Filliatre"
   "Richard W.M. Jones")
 (license "LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception")
-(source (github dune-universe/dum))
+(source (github mjambon/dum))
 
 (package
   (name dum)
