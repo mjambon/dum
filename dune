@@ -1,4 +1,4 @@
 (library
-  (name dum)
+  (public_name dum)
   (modules dum)
   (libraries easy-format))
